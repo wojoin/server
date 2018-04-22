@@ -63,7 +63,7 @@ int main(int argc,char* argv[])
     while(1)      
     {  
         ticks=time(NULL);    
-        snprintf(buff,sizeof(buff),"%.24s\n",ctime(&ticks));    
+        snprintf(buff, sizeof(buff),"%.24s\n",ctime(&ticks));    
 		printf("bufsize: %d daytime=%s\n", (int)strlen(buff), buff);
         write(connfd,buff,strlen(buff));
         //close(connfd);
